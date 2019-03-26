@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular Riffage';
+  
+  currentRiffTitle: string;
+  currentRiffPurveyor: string;
+  riffAngularity: number;
+
+  constructor() {
+
+    this.currentRiffTitle = 'Heaven Knows';
+    this.currentRiffPurveyor = 'Other';
+    this.riffAngularity = 4
+
+  }
+
 }
