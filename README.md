@@ -1,27 +1,29 @@
-# AngularRiffage
+# Angular Riffage
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+Do you like guitars? :guitar:  
+Do you like angles? :triangular_ruler:  
+Do you like noise made by guitars that somehow reminds you of angles? :guitar: + :triangular_ruler: = :musical_note::musical_note::musical_note:  
+Well, then you've come to the right place! Welcome to Angular Riffs, you lucky dog, you.
 
-## Development server
+![Alt text](src/assets/ouch-ears-too-angular.jpg?raw=true "Eep so much angularity in this riff-hole")
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### What's all this then, you say?
 
-## Code scaffolding
+So far it's a work in progress, sure, but soon, in all its finalized glory, you'll find a simple but endlessly amusing single-page application designed to get to the heart, to the very nitty-gritty, to the molten, sweaty core of the question on all our lips:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[WHAT EVEN MAKES A RIFF ANGULAR?](https://www.ultimate-guitar.com/forum/showthread.php?t=463424)
 
-## Build
+Of course, there are then corollary questions such as:
+* Is one riff more angular than another?
+* If so, to what degree?
+* Does some artist or band have a predilection for purveying angular riffs on a more regular basis than other riffs (or than other riff-purveyors)?  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+And so on to your giddy little riff-addled heart's content, yessiree bob.
 
-## Running unit tests
+![Alt text](src/assets/ouch-ears-too-angular-flipped.jpg?raw=true "Oh deary, this one too")
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### And yes, the rumours are true...
 
-## Running end-to-end tests
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6. Proud of it, too.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Meanwhile, while you're here, why not check out something else from the makers of Angular Riffs? It's called [xQuisite Corpsing](https://romen-reyes-peschl.com/xQuisite-Corpsing) and it's blatantly rad.
