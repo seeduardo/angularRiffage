@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Riff } from './riff'
 
 @Component({
   selector: 'app-root',
@@ -7,24 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular Riffage';
-
-  allRiffs: Array<{riffTitle: string, riffPurveyor: string, riffAngularity: number}> = [{riffTitle: "Maximum Accident", riffPurveyor: "Aminiature", riffAngularity: 6}, {riffTitle: "Maze of Torment", riffPurveyor: "Morbid Angel", riffAngularity: 7}];
-
-  currentRiffTitle: string;
-  currentRiffPurveyor: string;
-  riffAngularity: number;
+  riff: Riff;
 
   constructor() {
 
-    this.currentRiffTitle = 'Heaven Knows';
-    this.currentRiffPurveyor = 'Other';
-    this.riffAngularity = 4;
-    this.allRiffs
+    this.riff = new Riff();
+    this.riff.currentRiffTitle = 'Heaven Knows';
+    this.riff.currentRiffPurveyor = 'Other';
+    this.riff.currentRiffAngularity = 4;
+    this.riff.allRiffs
 
-  }
-
-  addRiff(riff: {string, string, number}) {
-    this.allRiffs.push(riff)
   }
 
 }

@@ -7,7 +7,7 @@
 </div>
 <div class="current-riff" style="text-align:center">
   <ul>
-    <li *ngFor="let riff of allRiffs">
+    <li *ngFor="let riff of riff.allRiffs">
       <ul>
         <li>The Angular Riff currently locked and loaded is: {{ riff.riffTitle }}</li>
         <li>Said Riff was purveyed by: {{ riff.riffPurveyor }}</li>
@@ -16,9 +16,9 @@
     </li>
     <li>
       <ul>
-        <li>The Angular Riff currently locked and loaded is: {{ currentRiffTitle }}</li>
-        <li>Said Riff was purveyed by: {{ currentRiffPurveyor }}</li>
-        <li>Its level of Riff Angularity is: {{ riffAngularity }} out of 10</li>
+        <li>The Angular Riff currently locked and loaded is: {{ riff.currentRiffTitle }}</li>
+        <li>Said Riff was purveyed by: {{ riff.currentRiffPurveyor }}</li>
+        <li>Its level of Riff Angularity is: {{ riff.currentRiffAngularity }} out of 10</li>
       </ul>
     </li>
   </ul>
@@ -32,7 +32,7 @@
   <input type="text" name="riffPurveyor" #RiffPurveyor><br>
   <label for="riffAngularity">Angularity (out of 10): </label>
   <input type="text" name="riffAngularity" #RiffAngularity><br>
-  <button (click)="addRiff({riffTitle: RiffTitle.value, riffPurveyor: RiffPurveyor.value, riffAngularity: RiffAngularity.value})">This riff be angular, agreed?</button>
+  <button (click)="riff.addRiff({riffTitle: RiffTitle.value, riffPurveyor: RiffPurveyor.value, riffAngularity: RiffAngularity.value})">This riff be angular, agreed?</button>
 </div>
 <!-- <h2>Here are some links to help you start: </h2>
 <ul>
