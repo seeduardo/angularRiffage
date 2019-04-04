@@ -1,11 +1,12 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Right Logo" src='./assets/ouch-ears-too-angular.jpg'>
+<div class="jumbotron-fluid" >
+  <div class="container">
+    <h1 class="display-3">Welcome to {{ title }}!</h1>
+    <p class="lead" >WHERE THE AGE-OLD MYSTERIES OF RIFF ANGULARITY ARE FINALLY LAID BARE</p>
+    <hr class="my-2">
+  </div>
 </div>
-<div class="current-riff" style="text-align:center">
+<div class="current-riff container" >
+  <img width="150" alt="Right Logo" src='./assets/ouch-ears-too-angular.jpg'><hr>
   <ul>
     <li *ngFor="let riff of riff.allRiffs">
       <ul>
@@ -21,10 +22,10 @@
         <li>Its level of Riff Angularity is: {{ riff.currentRiffAngularity }} out of 10</li>
       </ul>
     </li>
-  </ul>
-  <img width="300" alt="Left Logo" src='./assets/ouch-ears-too-angular-flipped.jpg'>
-</div>
-<div class="new-riff" style="text-align:center">
+  </ul><hr>
+  <img width="150" alt="Left Logo" src='./assets/ouch-ears-too-angular-flipped.jpg'>
+</div><hr>
+<div class="new-riff container" >
   <h3>Propose a new Angular Riff</h3>
   <label for="riffTitle">Title: </label>
   <input type="text" name="riffTitle" #RiffTitle><br>
@@ -33,19 +34,7 @@
   <label for="riffAngularity">Angularity (out of 10): </label>
   <input type="text" name="riffAngularity" #RiffAngularity><br>
   <button (click)="riff.addRiff({riffTitle: RiffTitle.value, riffPurveyor: RiffPurveyor.value, riffAngularity: RiffAngularity.value})">This riff be angular, agreed?</button>
-</div>
-<!-- <h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul> -->
+</div><hr>
 <footer><p>Check also <a href="https://romen-reyes-peschl.com/xQuisite-Corpsing">xQuisite Corpsing</a> by <a href="https://romen-reyes-peschl.com">Romén Reyes-Peschl</a></p></footer>
 
 <router-outlet></router-outlet>
