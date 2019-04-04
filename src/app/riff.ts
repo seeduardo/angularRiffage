@@ -9,7 +9,7 @@ export class Riff {
 
   }
 
-  addRiff(riff: {string, string, number}) {
+  addRiff(riff: {riffTitle, riffPurveyor, riffAngularity}) {
     this.allRiffs.push(riff)
   }
 
