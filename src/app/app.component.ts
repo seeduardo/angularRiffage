@@ -8,15 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular Riffage';
-  riff: Riff;
+  // riff: Riff;
 
   constructor() {
 
-    this.riff = new Riff();
-    this.riff.currentRiffTitle = 'Heaven Knows';
-    this.riff.currentRiffPurveyor = 'Other';
-    this.riff.currentRiffAngularity = 4;
-    this.riff.allRiffs
+    // this.riff = new Riff();
+    // this.riff.currentRiffTitle = 'Heaven Knows';
+    // this.riff.currentRiffPurveyor = 'Other';
+    // this.riff.currentRiffAngularity = 4;
+    // this.riff.allRiffs
 
   }
 

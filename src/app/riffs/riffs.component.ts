@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { MockData } from './../mock-data/mock-riff-data';
+import { Component, OnInit } from '@angular/core';
 import { Riff } from '../models/riff'
 
 @Component({
