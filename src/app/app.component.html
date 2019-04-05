@@ -5,9 +5,12 @@
     <hr class="my-2">
   </div>
 </div>
+<div class="container-fluid">
+  <app-riffs></app-riffs>
+</div>
 <div class="current-riff container" >
   <img width="150" alt="Right Logo" src='./assets/ouch-ears-too-angular.jpg'><hr>
-  <ul>
+  <!-- <ul>
     <li *ngFor="let riff of riff.allRiffs">
       <ul>
         <li>The Angular Riff currently locked and loaded is: {{ riff.riffTitle }}</li>
@@ -22,10 +25,10 @@
         <li>Its level of Riff Angularity is: {{ riff.currentRiffAngularity }} out of 10</li>
       </ul>
     </li>
-  </ul><hr>
+  </ul><hr> -->
   <img width="150" alt="Left Logo" src='./assets/ouch-ears-too-angular-flipped.jpg'>
 </div><hr>
-<div class="new-riff container" >
+<!-- <div class="new-riff container" >
   <h3>Propose a new Angular Riff</h3>
   <label for="riffTitle">Title: </label>
   <input type="text" name="riffTitle" #RiffTitle><br>
@@ -34,7 +37,7 @@
   <label for="riffAngularity">Angularity (out of 10): </label>
   <input type="text" name="riffAngularity" #RiffAngularity><br>
   <button (click)="riff.addRiff({riffTitle: RiffTitle.value, riffPurveyor: RiffPurveyor.value, riffAngularity: RiffAngularity.value})">This riff be angular, agreed?</button>
-</div><hr>
+</div><hr> -->
 <footer><p>Check also <a href="https://romen-reyes-peschl.com/xQuisite-Corpsing">xQuisite Corpsing</a> by <a href="https://romen-reyes-peschl.com">Romén Reyes-Peschl</a></p></footer>
 
 <router-outlet></router-outlet>

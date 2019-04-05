@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Riffs</h4>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Riff Purveyor</th>
+        <th>Angularity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let riff of riffs">
+        <td scope="row">{{riff.riffTitle}}</td>
+        <td>{{riff.riffPurveyor}}</td>
+        <td>{{riff.riffAngularity | currency : 'INR'}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
