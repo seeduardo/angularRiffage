@@ -1,9 +1,19 @@
 <div class="card bg-secondary text-white">
   <div class="card-body">
     <h4 class="card-title">"{{riff.riffTitle}}"</h4>
-    <h5 class="card-text">{{riff.riffAngularity}} out of 10 for angularity</h5>
+    <h5 class="card-text">Riff purveyed by {{riff.riffPurveyor}}</h5>
   </div>
   <table class="table">
+    <tr>
+      <td scope="row">
+        <b>Votes: </b>
+      </td>
+      <td>
+        <i *ngIf="riff.votes>0">{{riff.votes}}</i>
+        <i *ngIf="riff.votes===0">None yet!</i>
+        <i *ngIf="riff.votes<0">None yet!</i>
+      </td>
+    </tr>
     <!-- <tr>
       <td scope="row">
         <b>Genre</b>
@@ -15,9 +25,13 @@
     </tr> -->
     <tr>
       <td scope="row">
-        <b>Riff Purveyor</b>
+        <b>Angularity index: </b>
       </td>
-      <td>{{riff.riffPurveyor}}</td>
+      <td>{{riff.riffAngularity}} out of 10</td>
     </tr>
   </table>
+  <div class="card-footer text-muted">
+  <button type="button" class="btn btn-success" (click)="upvote()"> Agreed - that riff is so damn angular! </button>
+  <button type="button" class="btn btn-danger" (click)="downvote()"> Nope, that's linear, not angular at all! </button>
+  </div>
 </div>

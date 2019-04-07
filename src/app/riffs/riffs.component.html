@@ -1,4 +1,13 @@
-<div class="card">
+<div class="card" >
+  <div class="card-body">
+    <h4 class="card-title">Riffs</h4>
+    <div class="row">
+      <app-riff style="margin-bottom: 10px" class="col-md-4" [riff]="riff" (upvoted)="upvoteRiff($event)" (downvoted)="downvoteRiff($event)" *ngFor="let riff of riffs"></app-riff>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="card">
   <div class="card-body">
     <h4 class="card-title">Riffs</h4>
   </div>
@@ -18,4 +27,4 @@
       </tr>
     </tbody>
   </table>
-</div>
+</div> -->
