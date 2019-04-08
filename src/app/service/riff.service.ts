@@ -17,11 +17,11 @@ export class RiffService {
     return this.riffs;
   }
 
-  upvoteRiff(riff: Riff) {
+  upvote(riff: Riff) {
     riff.votes++
   }
 
-  downvoteRiff(riff: Riff) {
+  downvote(riff: Riff) {
     riff.votes >= 0
     ? riff.votes--
     : null

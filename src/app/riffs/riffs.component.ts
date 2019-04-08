@@ -1,4 +1,4 @@
-import { MockData } from './../mock-data/mock-riff-data';
+import { RiffService } from './../service/riff.service';
 import { Component, OnInit } from '@angular/core';
 import { Riff } from '../models/riff';
 
@@ -11,21 +11,21 @@ export class RiffsComponent implements OnInit {
 
   riffs: Riff[] = [];
 
-  constructor() {
-    this.riffs = MockData.Riffs;
+  constructor(public riffService: RiffService) {
+    this.riffs = riffService.getRiffs();
   }
 
   ngOnInit() {
   }
 
   upvoteRiff(riff: Riff) {
-    riff.votes++
+    this.riffService.upvote(riff)
+    // this.riffs = this.riffService.getRiffs();
   }
 
   downvoteRiff(riff: Riff) {
-    riff.votes >= 0
-    ? riff.votes--
-    : null
+    this.riffService.downvote(riff)
+    // this.riffs = this.riffService.getRiffs();
   }
 
 }

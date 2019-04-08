@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RiffsComponent } from './riffs/riffs.component';
 import { RiffComponent } from './riff/riff.component';
+import { RiffService } from './service/riff.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { RiffComponent } from './riff/riff.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [RiffService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
