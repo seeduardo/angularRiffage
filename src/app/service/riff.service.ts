@@ -22,7 +22,7 @@ export class RiffService {
   }
 
   downvote(riff: Riff) {
-    riff.votes >= 0
+    riff.votes >= 1
     ? riff.votes--
     : null
   }
