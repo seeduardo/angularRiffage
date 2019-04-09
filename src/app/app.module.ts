@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { RiffsComponent } from './riffs/riffs.component';
 import { RiffComponent } from './riff/riff.component';
 import { RiffService } from './service/riff.service';
+import { AddRiffModelComponent } from './service/add-riff-model/add-riff-model.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RiffsComponent,
-    RiffComponent
+    RiffComponent,
+    AddRiffModelComponent
   ],
   imports: [
     BrowserModule,
