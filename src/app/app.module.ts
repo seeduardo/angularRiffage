@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { RiffsComponent } from './riffs/riffs.component';
 import { RiffComponent } from './riff/riff.component';
 import { RiffService } from './service/riff.service';
-import { AddRiffModelComponent } from './service/add-riff-model/add-riff-model.component';
+import { AddRiffModelComponent } from './add-riff-model/add-riff-model.component';
 
 @NgModule({
   declarations: [
