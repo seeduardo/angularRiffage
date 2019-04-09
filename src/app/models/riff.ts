@@ -4,6 +4,7 @@ export class Riff {
   riffTitle: string;
   riffPurveyor: string;
   riffAngularity: number;
+  votes: number;
   // currentRiffTitle: string;
   // currentRiffPurveyor: string;
   // currentRiffAngularity: number;
