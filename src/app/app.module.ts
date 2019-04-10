@@ -7,6 +7,7 @@ import { RiffsComponent } from './riffs/riffs.component';
 import { RiffComponent } from './riff/riff.component';
 import { RiffService } from './service/riff.service';
 import { AddRiffModelComponent } from './add-riff-model/add-riff-model.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AddRiffModelComponent } from './add-riff-model/add-riff-model.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [RiffService],
   bootstrap: [AppComponent]

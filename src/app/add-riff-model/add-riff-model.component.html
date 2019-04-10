@@ -3,14 +3,14 @@
     <h4 class="card-title">Suggest a Riff! (Model Driven Form)</h4>
     <div class="row">
       <div class="col-md-6">
-        <form novalidate>
+        <form novalidate [formGroup]="riffForm">
           <div class="form-group">
             <label>Title</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="riffTitle">
           </div>
           <div class="form-group ">
             <label>Purveyor</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" formControlName="riffPurveyor">
           </div>
           <!-- <div class="form-group ">
             <label>Angularity (out of 10)</label>
@@ -18,13 +18,14 @@
           </div> -->
           <div class="form-group ">
             <label>Angularity</label>
-            <select class="form-control">
+            <select class="form-control" formControlName="riffAngularity">
               <option *ngFor="let angLevel of angLevels" [value]="angLevel">{{angLevel}}</option>
             </select>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
           <button class="btn btn-default">Reset</button>
         </form>
+        <pre > {{riffForm.value | json}} </pre>
       </div>
     </div>
   </div>
