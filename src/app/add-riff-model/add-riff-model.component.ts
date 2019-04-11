@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-riff-model',
@@ -8,7 +8,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class AddRiffModelComponent implements OnInit {
 
-  angLevels = ['Choose Level out of 10!', 1,2,3,4,5,6,7,8,9,10];
+  angLevels = ['Click here to choose angularity level', 1,2,3,4,5,6,7,8,9,10];
 
   riffForm: FormGroup;
 
@@ -20,9 +20,9 @@ export class AddRiffModelComponent implements OnInit {
 
   ngOnInit() {
 
-    this.riffTitle = new FormControl();
-    this.riffPurveyor = new FormControl;
-    this.riffAngularity = new FormControl;
+    this.riffTitle = new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z0-9].*$')]);
+    this.riffPurveyor = new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z0-9].*$')]);
+    this.riffAngularity = new FormControl('Click here to choose angularity level', Validators.pattern('^([1-9]|10)$'));
 
     this.riffForm = new FormGroup({
       'riffTitle': this.riffTitle,
