@@ -36,7 +36,7 @@
               Angularity must be between 1 and 10, yo!
             </div>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" [disabled]="riffForm.invalid" class="btn btn-primary">Submit</button>
           <button class="btn btn-default">Reset</button>
         </form>
         <pre > {{riffForm.value | json}} </pre>
