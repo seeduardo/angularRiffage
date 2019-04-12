@@ -17,6 +17,10 @@ export class RiffService {
     return this.riffs;
   }
 
+  addRiff(riff: Riff) {
+    this.riffs.push(riff);
+  }
+
   upvote(riff: Riff) {
     riff.votes++
   }
