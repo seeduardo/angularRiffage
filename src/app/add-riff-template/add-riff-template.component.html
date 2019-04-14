@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Suggest a Riff!</h4>
+    <div class="row">
+      <div class="col-md-6">
+        <form novalidate>
+          <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group ">
+            <label>Purveyor</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group ">
+            <label>Angularity (out of 10)</label>
+            <select class="form-control" formControlName="riffAngularity">
+              <option *ngFor="let angLevel of angLevels" [value]="angLevel">{{angLevel}}</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <button class="btn btn-default">Reset</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

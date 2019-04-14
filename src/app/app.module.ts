@@ -8,13 +8,15 @@ import { RiffComponent } from './riff/riff.component';
 import { RiffService } from './service/riff.service';
 import { AddRiffModelComponent } from './add-riff-model/add-riff-model.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddRiffTemplateComponent } from './add-riff-template/add-riff-template.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RiffsComponent,
     RiffComponent,
-    AddRiffModelComponent
+    AddRiffModelComponent,
+    AddRiffTemplateComponent
   ],
   imports: [
     BrowserModule,
