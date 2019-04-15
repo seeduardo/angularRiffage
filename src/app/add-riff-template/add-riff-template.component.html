@@ -3,24 +3,25 @@
     <h4 class="card-title">Suggest a Riff!</h4>
     <div class="row">
       <div class="col-md-6">
-        <form novalidate>
+        <form novalidate #riffForm="ngForm">
           <div class="form-group">
             <label>Title</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" name="riffTitle" ngModel>
           </div>
           <div class="form-group ">
             <label>Purveyor</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" name="riffPurveyor" ngModel>
           </div>
           <div class="form-group ">
             <label>Angularity (out of 10)</label>
-            <select class="form-control" formControlName="riffAngularity">
+            <select class="form-control" name="riffAngularity" ngModel>
               <option *ngFor="let angLevel of angLevels" [value]="angLevel">{{angLevel}}</option>
             </select>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
           <button class="btn btn-default">Reset</button>
         </form>
+        <pre > {{riffForm.value | json}} </pre>
       </div>
     </div>
   </div>
