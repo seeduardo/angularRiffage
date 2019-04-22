@@ -6,23 +6,28 @@
         <form novalidate #riffForm="ngForm">
           <div class="form-group">
             <label>Title</label>
-            <input type="text" class="form-control" name="riffTitle" ngModel>
+            <input type="text" class="form-control" name="riffTitle" [(ngModel)]="riff.riffTitle">
           </div>
           <div class="form-group ">
             <label>Purveyor</label>
-            <input type="text" class="form-control" name="riffPurveyor" ngModel>
+            <input type="text" class="form-control" name="riffPurveyor" [(ngModel)]="riff.riffPurveyor">
           </div>
           <div class="form-group ">
             <label>Angularity (out of 10)</label>
-            <select class="form-control" name="riffAngularity" ngModel>
+            <select class="form-control" name="riffAngularity" [(ngModel)]="riff.riffAngularity">
               <option *ngFor="let angLevel of angLevels" [value]="angLevel">{{angLevel}}</option>
             </select>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
           <button class="btn btn-default">Reset</button>
         </form>
-        <pre > {{riffForm.value | json}} </pre>
+        <!-- <pre > {{riffForm.value | json}} </pre> -->
       </div>
+      <div class="col-md-6">
+          <label>
+            <strong>riffForm : JSON</strong>
+          </label>
+          <pre class="alert alert-dark">{{riffForm.value | json}}</pre>
     </div>
   </div>
 </div>
