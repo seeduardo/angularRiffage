@@ -6,28 +6,42 @@
         <form novalidate #riffForm="ngForm">
           <div class="form-group">
             <label>Title</label>
-            <input type="text" class="form-control" name="riffTitle" [(ngModel)]="riff.riffTitle">
+            <input type="text" class="form-control" name="riffTitle" [(ngModel)]="riff.riffTitle" required pattern="^[a-zA-Z0-9].*$" #riffTitle="ngModel" [ngClass]="{'is-invalid': riffTitle.errors && (riffTitle.touched || riffTitle.dirty), 'is-valid':riffTitle.valid}">
+          </div>
+          <div class="alert alert-danger" role="alert"
+           *ngIf="riffTitle.errors && (riffTitle.touched || riffTitle.dirty)">
+             <strong *ngIf="riffTitle.errors?.required">A riff needs a title, fer crying out loud</strong>
+             <strong *ngIf="riffTitle.errors?.pattern">Riff titles can't start with a space or a symbol, duh</strong>
           </div>
           <div class="form-group ">
             <label>Purveyor</label>
-            <input type="text" class="form-control" name="riffPurveyor" [(ngModel)]="riff.riffPurveyor">
+            <input type="text" class="form-control" name="riffPurveyor" [(ngModel)]="riff.riffPurveyor" required pattern="^[a-zA-Z0-9].*$" #riffPurveyor="ngModel" [ngClass]="{'is-invalid': riffPurveyor.errors && (riffPurveyor.touched || riffPurveyor.dirty), 'is-valid':riffPurveyor.valid}">
+          </div>
+          <div class="alert alert-danger" role="alert"
+           *ngIf="riffPurveyor.errors && (riffPurveyor.touched || riffPurveyor.dirty)">
+             <strong *ngIf="riffTitle.errors?.required">Someone purveyed the riff, not nobody!</strong>
+             <strong *ngIf="riffTitle.errors?.pattern">Riff purveyors can't start with a space or a symbol, duh</strong>
           </div>
           <div class="form-group ">
             <label>Angularity (out of 10)</label>
-            <select class="form-control" name="riffAngularity" [(ngModel)]="riff.riffAngularity">
+            <select class="form-control" name="riffAngularity" [(ngModel)]="riff.riffAngularity" required pattern="^([1-9]|10)$" #riffAngularity="ngModel" [ngClass]="{'is-invalid': riffAngularity.errors && (riffAngularity.touched || riffAngularity.dirty), 'is-valid':riffAngularity.valid}">
               <option *ngFor="let angLevel of angLevels" [value]="angLevel">{{angLevel}}</option>
             </select>
+            <div class="alert alert-danger" role="alert"
+             *ngIf="riffAngularity.errors && (riffAngularity.touched || riffAngularity.dirty)">
+              Angularity must be between 1 and 10, yo!
+            </div>
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
           <button class="btn btn-default">Reset</button>
         </form>
         <!-- <pre > {{riffForm.value | json}} </pre> -->
       </div>
-      <div class="col-md-6">
+      <!-- <div class="col-md-6">
           <label>
             <strong>riffForm : JSON</strong>
           </label>
           <pre class="alert alert-dark">{{riffForm.value | json}}</pre>
-    </div>
+    </div> -->
   </div>
 </div>
