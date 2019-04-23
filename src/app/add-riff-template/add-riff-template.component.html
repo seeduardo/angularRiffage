@@ -1,8 +1,16 @@
 <div class="card">
   <div class="card-body">
     <h4 class="card-title">Suggest a Riff!</h4>
+    <div class="alert alert-info alert-dismissible " role="alert" *ngIf="riffFormSubmitted">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="riffFormSubmitted = false" (click)="riffForm.reset()">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+      <strong>Boom! Riff form submitted.... The world just got that little bit more angular!</strong>
+    </div>
     <div class="row">
       <div class="col-md-6">
+
         <form novalidate #riffForm="ngForm">
           <div class="form-group">
             <label>Title</label>
@@ -32,8 +40,8 @@
               Angularity must be between 1 and 10, yo!
             </div>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-          <button class="btn btn-default">Reset</button>
+          <button type="submit" class="btn btn-primary" [disabled]="riffForm.invalid" (click)="addRiff()">Submit</button>
+          <button class="btn btn-default" (click)="riffForm.reset()">Reset</button>
         </form>
         <!-- <pre > {{riffForm.value | json}} </pre> -->
       </div>
