@@ -25,8 +25,8 @@
             <input type="text" class="form-control" formControlName="riffPurveyor" [ngClass]="{'is-invalid': riffPurveyor.errors && (riffPurveyor.touched || riffPurveyor.dirty), 'is-valid':riffPurveyor.valid}">
             <div class="alert alert-danger" role="alert"
              *ngIf="riffPurveyor.errors && (riffPurveyor.touched || riffPurveyor.dirty)">
-               <strong *ngIf="riffTitle.errors?.required">Someone purveyed the riff, not nobody!</strong>
-               <strong *ngIf="riffTitle.errors?.pattern">Riff purveyors can't start with a space or a symbol, duh</strong>
+               <strong *ngIf="riffPurveyor.errors?.required">Someone purveyed the riff, not nobody!</strong>
+               <strong *ngIf="riffPurveyor.errors?.pattern">Riff purveyors can't start with a space or a symbol, duh</strong>
             </div>
           </div>
           <!-- <div class="form-group ">
