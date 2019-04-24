@@ -16,7 +16,7 @@ export class AddRiffModelComponent implements OnInit {
 
   riffTitle: FormControl;
   riffPurveyor: FormControl;
-  riffAngularity: FormGroup;
+  riffAngularity: FormControl;
 
   constructor(private riffService: RiffService) { }
 

@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { RiffsComponent } from './riffs/riffs.component';
 import { RiffComponent } from './riff/riff.component';
 import { RiffService } from './service/riff.service';
-// import { AddRiffModelComponent } from './add-riff-model/add-riff-model.component';
-// import { ReactiveFormsModule } from '@angular/forms';
+import { AddRiffModelComponent } from './add-riff-model/add-riff-model.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AddRiffTemplateComponent } from './add-riff-template/add-riff-template.component';
 
@@ -16,13 +16,13 @@ import { AddRiffTemplateComponent } from './add-riff-template/add-riff-template.
     AppComponent,
     RiffsComponent,
     RiffComponent,
-    // AddRiffModelComponent,
+    AddRiffModelComponent,
     AddRiffTemplateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // ReactiveFormsModule,
+    ReactiveFormsModule,
     FormsModule
   ],
   providers: [RiffService],
