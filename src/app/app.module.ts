@@ -10,6 +10,7 @@ import { AddRiffModelComponent } from './add-riff-model/add-riff-model.component
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AddRiffTemplateComponent } from './add-riff-template/add-riff-template.component';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AddRiffTemplateComponent } from './add-riff-template/add-riff-template.
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    LayoutModule
   ],
   providers: [RiffService],
   bootstrap: [AppComponent]
