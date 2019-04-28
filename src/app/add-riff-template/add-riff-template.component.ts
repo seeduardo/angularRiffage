@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Riff } from '../models/riff';
-import { RiffService } from './../service/riff.service'
+import { RiffService } from './../service/riff.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,11 +15,12 @@ export class AddRiffTemplateComponent implements OnInit {
   angLevels = [1,2,3,4,5,6,7,8,9,10];
   riffFormSubmitted = false;
 
-  constructor(public riffService: RiffService) { }
+  constructor(private riffService: RiffService, private router: Router) { }
 
   addRiff() {
     this.riffService.addRiff(this.riff);
     this.riffFormSubmitted = true;
+    this.router.navigateByUrl('/riffs');
   };
 
   ngOnInit() {
