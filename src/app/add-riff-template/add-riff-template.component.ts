@@ -18,6 +18,7 @@ export class AddRiffTemplateComponent implements OnInit {
   constructor(private riffService: RiffService, private router: Router) { }
 
   addRiff() {
+    this.riff.votes = 0;
     this.riffService.addRiff(this.riff);
     this.riffFormSubmitted = true;
     this.router.navigateByUrl('/riffs');
