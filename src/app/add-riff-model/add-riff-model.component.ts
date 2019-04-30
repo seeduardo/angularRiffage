@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Riff } from '../models/riff';
 import { RiffService } from '../service/riff.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-riff-model',
@@ -18,7 +19,7 @@ export class AddRiffModelComponent implements OnInit {
   riffPurveyor: FormControl;
   riffAngularity: FormControl;
 
-  constructor(private riffService: RiffService) { }
+  constructor(private riffService: RiffService, private router: Router) { }
 
   ngOnInit() {
 
@@ -37,8 +38,10 @@ export class AddRiffModelComponent implements OnInit {
   riffFormSubmitted = false;
 
   addRiff(riff: Riff) {
+    riff.votes = 0;
     this.riffService.addRiff(riff);
     this.riffFormSubmitted = true;
+    this.router.navigateByUrl('/riffs');
   };
 
 }
