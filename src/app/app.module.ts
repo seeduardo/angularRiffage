@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { AddRiffTemplateComponent } from './add-riff-template/add-riff-template.component';
 import { LayoutModule } from './layout/layout.module';
+import { RiffDetailComponent } from './riff-detail/riff-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LayoutModule } from './layout/layout.module';
     RiffsComponent,
     RiffComponent,
     AddRiffModelComponent,
-    AddRiffTemplateComponent
+    AddRiffTemplateComponent,
+    RiffDetailComponent
   ],
   imports: [
     BrowserModule,
