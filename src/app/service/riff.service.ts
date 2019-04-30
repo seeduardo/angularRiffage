@@ -17,6 +17,10 @@ export class RiffService {
     return this.riffs;
   }
 
+  getRiff(id: number) {
+    return this.riffs.find(riff => riff.id === id);
+  }
+
   addRiff(riff: Riff) {
     this.riffs.push(riff);
   }

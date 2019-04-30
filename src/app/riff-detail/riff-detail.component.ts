@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { RiffService } from './../service/riff.service';
+import { Riff } from './../models/riff';
+import {ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-riff-detail',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RiffDetailComponent implements OnInit {
 
-  constructor() { }
+  riff: Riff;
+
+  constructor(private activatedRoute: ActivatedRoute, private location: Location, private riffService: RiffService) { }
 
   ngOnInit() {
+
+    let id = +this.activatedRoute.snapshot.paramMap.get('id');
+    console.log('ID: ' + id);
+    this.riff = this.riffService.getRiff(id);
+
   }
 
 }
