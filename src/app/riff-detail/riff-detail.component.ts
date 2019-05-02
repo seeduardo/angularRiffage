@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RiffService } from './../service/riff.service';
 import { Riff } from './../models/riff';
-import {ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
@@ -21,6 +21,10 @@ export class RiffDetailComponent implements OnInit {
     console.log('ID: ' + id);
     this.riff = this.riffService.getRiff(id);
 
+  }
+
+  goBack() {
+    this.location.back();
   }
 
 }
