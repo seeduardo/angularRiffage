@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { MockData } from './../mock-data/mock-riff-data';
 import { Riff } from '../models/riff';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +15,8 @@ export class RiffService {
     this.riffs = MockData.Riffs;
   }
 
-  getRiffs(): Riff[] {
-    return this.riffs;
+  getRiffs(): Observable<Riff[]> {
+    return of(this.riffs);
   }
 
   getRiff(id: number) {
