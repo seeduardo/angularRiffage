@@ -18,8 +18,9 @@ export class RiffDetailComponent implements OnInit {
   ngOnInit() {
 
     let id = +this.activatedRoute.snapshot.paramMap.get('id');
-    console.log('ID: ' + id);
-    this.riff = this.riffService.getRiff(id);
+    this.riffService.getRiff(id).subscribe(
+      riff => this.riff = riff
+    );
 
   }
 

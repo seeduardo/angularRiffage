@@ -12,10 +12,12 @@ export class RiffsComponent implements OnInit {
   riffs: Riff[] = [];
 
   constructor(public riffService: RiffService) {
-    this.riffs = riffService.getRiffs();
   }
 
   ngOnInit() {
+    this.riffService.getRiffs().subscribe(
+      riffs => this.riffs = riffs
+    );
   }
 
   upvoteRiff(riff: Riff) {
