@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RiffsComponent } from './riffs/riffs.component';
@@ -12,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { AddRiffTemplateComponent } from './add-riff-template/add-riff-template.component';
 import { LayoutModule } from './layout/layout.module';
 import { RiffDetailComponent } from './riff-detail/riff-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { RiffDetailComponent } from './riff-detail/riff-detail.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    LayoutModule
+    LayoutModule,
+    HttpClientModule
   ],
   providers: [RiffService],
   bootstrap: [AppComponent]
