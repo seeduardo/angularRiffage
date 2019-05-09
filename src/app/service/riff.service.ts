@@ -19,8 +19,8 @@ export class RiffService {
     return of(this.riffs);
   }
 
-  getRiff(id: number) {
-    return this.riffs.find(riff => riff.id === id);
+  getRiff(id: number): Observable {
+    return of(this.riffs.find(riff => riff.id === id));
   }
 
   addRiff(riff: Riff) {
