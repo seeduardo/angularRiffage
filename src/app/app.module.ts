@@ -11,7 +11,9 @@ import { FormsModule } from '@angular/forms';
 import { AddRiffTemplateComponent } from './add-riff-template/add-riff-template.component';
 import { LayoutModule } from './layout/layout.module';
 import { RiffDetailComponent } from './riff-detail/riff-detail.component';
+import { InMemoryRiffService } from './in-memory-riff.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     FormsModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryRiffService)
   ],
   providers: [RiffService],
   bootstrap: [AppComponent]
