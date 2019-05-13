@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MockData } from './../mock-data/mock-riff-data';
 import { Riff } from '../models/riff';
-import { Observable } from 'rxjs';
-import { of } from 'rxjs';
+import { Observable, of, catchError, map, tap } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -19,7 +18,16 @@ export class RiffService {
 
   getRiffs(): Observable<Riff[]> {
     // return of(this.riffs);
-    return this.httpClient.get<Riff[]>(this.riffsUrl)
+    return this.httpClient.get<Riff[]>(this.riffsUrl).pipe(
+        catchError(this.handleError('getRiffs', []))
+    );
+  }
+
+  private handleError(operation = 'operation', result?: T) {
+    return (error: any): Observable => {
+      console.error(error);
+      return of(result as T);
+    }
   }
 
   getRiff(id: number): Observable {
