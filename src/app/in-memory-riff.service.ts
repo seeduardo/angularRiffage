@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
+// import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-
-@Injectable({
-  providedIn: 'root'
-})
+//
+// @Injectable({
+//   providedIn: 'root'
+// })
 export class InMemoryRiffService extends InMemoryDbService {
-
-  constructor() { }
+//
+//   constructor() { }
 
   createDb() {
     const riffs = [
@@ -26,6 +26,6 @@ export class InMemoryRiffService extends InMemoryDbService {
       }
     ];
     return { riffs };
-  }
+  };
 
 }
