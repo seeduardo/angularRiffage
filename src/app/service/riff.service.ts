@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 // import { MockData } from './../mock-data/mock-riff-data';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -20,6 +20,8 @@ export class RiffService {
   getRiffs(): Observable<Riff[]> {
     // return of(this.riffs);
     return this.httpClient.get<Riff[]>(this.riffsUrl).pipe(
+        tap(riffs => {console.log('Riffs Procured! Congrats: '); console.log(riffs);
+      }),
         catchError(this.handleError('getRiffs', []))
     );
   }
