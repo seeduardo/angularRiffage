@@ -7,23 +7,23 @@
         <table class="table">
           <tr>
             <th>Riff ID</th>
-            <td>{{riff.id}}</td>
+            <td>{{riff?.id}}</td>
           </tr>
           <tr>
             <th>Title</th>
-            <td>{{riff.riffTitle}}</td>
+            <td>{{riff?.riffTitle}}</td>
           </tr>
           <tr>
             <th>Purveyor</th>
-            <td>{{riff.riffPurveyor}}</td>
+            <td>{{riff?.riffPurveyor}}</td>
           </tr>
           <tr>
             <th>Angularity</th>
-            <td>{{riff.riffAngularity}}</td>
+            <td>{{riff?.riffAngularity}}</td>
           </tr>
           <tr>
             <th>Votes so far</th>
-            <td>{{riff.votes}}</td>
+            <td>{{riff?.votes}}</td>
           </tr>
         </table>
         <button type="button" class="btn btn-primary" (click)="goBack()">Back to Riffs</button>
