@@ -20,7 +20,7 @@ export class RiffService {
   getRiffs(): Observable<Riff[]> {
     // return of(this.riffs);
     return this.httpClient.get<Riff[]>(this.riffsUrl).pipe(
-        tap(riffs => {console.log('Riffs Procured! Congrats: '); console.log(riffs);
+        tap(riffs => {console.log('Riffs procured! Congrats: '); console.log(riffs);
       }),
         catchError(this.handleError('getRiffs', []))
     );
@@ -33,8 +33,12 @@ export class RiffService {
     }
   }
 
-  getRiff(id: number): Observable {
-    return of(this.riffs.find(riff => riff.id === id));
+  getRiff(id: number): Observable<Riff> {
+    const url = `${this.riffsUrl}/${id}`;
+    return this.httpClient.get<Riff>(url).pipe(
+      tap(() => console.log(`Riff with the id of ${id} successfully procured!`)), catchError(this.handleError<Riff> (`getHero id=${id}`))
+    );
+    // return of(this.riffs.find(riff => riff.id === id));
   }
 
   addRiff(riff: Riff) {
