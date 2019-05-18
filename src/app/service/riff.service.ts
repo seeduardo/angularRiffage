@@ -41,8 +41,15 @@ export class RiffService {
     // return of(this.riffs.find(riff => riff.id === id));
   }
 
-  addRiff(riff: Riff) {
-    this.riffs.push(riff);
+  addRiff(riff: Riff): Observable {
+    // this.riffs.push(riff);
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    };
+    return this.httpClient.post(this.riffsUrl, riff, httpOptions).pipe(
+      tap(aRiff => console.log(`Riff of id ${aRiff.id} has been added! Kudos.`)),
+      catchError(this.handleError('addRiff'))
+    );
   }
 
   upvote(riff: Riff) {

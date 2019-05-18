@@ -39,9 +39,11 @@ export class AddRiffModelComponent implements OnInit {
 
   addRiff(riff: Riff) {
     riff.votes = 0;
-    this.riffService.addRiff(riff);
-    this.riffFormSubmitted = true;
-    this.router.navigateByUrl('/riffs');
+    this.riffService.addRiff(riff).subscribe(
+      newRiff => {
+        this.riffFormSubmitted = true;
+        this.router.navigateByUrl('/riffs');
+      });
   };
 
 }
