@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 // import { MockData } from './../mock-data/mock-riff-data';
+import { Riff } from '../models/riff';
 import { Observable } from 'rxjs';
 import { of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
